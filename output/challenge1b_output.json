@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "input_documents": [
+      "Learn Acrobat - Create and Convert_1.pdf",
+      "Learn Acrobat - Create and Convert_2.pdf",
+      "Learn Acrobat - Edit_1.pdf",
+      "Learn Acrobat - Edit_2.pdf",
+      "Learn Acrobat - Export_1.pdf",
+      "Learn Acrobat - Export_2.pdf",
+      "Learn Acrobat - Fill and Sign.pdf",
+      "Learn Acrobat - Generative AI_1.pdf",
+      "Learn Acrobat - Generative AI_2.pdf",
+      "Learn Acrobat - Request e-signatures_1.pdf",
+      "Learn Acrobat - Request e-signatures_2.pdf",
+      "Learn Acrobat - Share_1.pdf",
+      "Learn Acrobat - Share_2.pdf",
+      "Test Your Acrobat Exporting Skills.pdf",
+      "The Ultimate PDF Sharing Checklist.pdf"
+    ],
+    "persona": "HR professional",
+    "job_to_be_done": "Create and manage fillable forms for onboarding and compliance.",
+    "processing_timestamp": "2025-07-27T19:49:51.914294+00:00"
+  },
+  "extracted_sections": [
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "page_number": 2,
+      "section_title": "• Interactive  forms : These  contain fields that you can select and fill in.",
+      "importance_rank": 1
+    },
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "page_number": 2,
+      "section_title": "• Flat forms : These do not have  interactive  fields.  It could be a paper form  or PDF that",
+      "importance_rank": 2
+    },
+    {
+      "document": "Learn Acrobat - Generative AI_1.pdf",
+      "page_number": 14,
+      "section_title": "Assistant .",
+      "importance_rank": 3
+    },
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "page_number": 8,
+      "section_title": "Is the form fillable?",
+      "importance_rank": 4
+    },
+    {
+      "document": "Learn Acrobat - Request e-signatures_1.pdf",
+      "page_number": 5,
+      "section_title": "This mode provides simplified authoring with the capability of assigning fields to",
+      "importance_rank": 5
+    }
+  ],
+  "sub_section_analysis": [
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "page_number": 2,
+      "refined_text": "Types of PDF forms   • Interactive  forms : These  contain fields that you can select and fill in.   • Flat forms : These do not have  interactive  fields.  It could be a paper form  or PDF that  hasn"
+    },
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "page_number": 2,
+      "refined_text": "Types of PDF forms   • Interactive  forms : These  contain fields that you can select and fill in.   • Flat forms : These do not have  interactive  fields.  It could be a paper form  or PDF that  hasn"
+    },
+    {
+      "document": "Learn Acrobat - Generative AI_1.pdf",
+      "page_number": 14,
+      "refined_text": "If you have questions about the document, scroll to the bottom, and select Ask AI  Assistant .    Streaming summaries for long PDFs   When you use Generative summary to scan lengthy PDFs, Acrobat or A"
+    },
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "page_number": 8,
+      "refined_text": "Fill in PDF Forms     Is the form fillable?   Not all forms are fillable. Sometimes form creators don’t convert their PDFs to  interactive fillable  forms. Or,  they intentionally design a form that y"
+    },
+    {
+      "document": "Learn Acrobat - Request e-signatures_1.pdf",
+      "page_number": 5,
+      "refined_text": "  • Simplified  mode  for multiple  signers   This mode provides simplified authoring with the capability of assigning fields to  multiple signers. When you select a signer from the right pa ne and ad"
+    }
+  ]
+}
