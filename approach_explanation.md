@@ -1,11 +1,11 @@
-# Round 1B: Persona-Driven Document Intelligence
-# Theme: “Connect What Matters — For the User Who Matters”
+# Round 1B: Persona-Driven Document Intelligence  
 
+## Theme: “Connect What Matters — For the User Who Matters”
 
 ## Challenge Brief
 
-You will build a system that acts as an intelligent document analyst, extracting
-and prioritizing the most relevant sections from a collection of documents based
+You will build a system that acts as an intelligent document analyst, extracting  
+and prioritizing the most relevant sections from a collection of documents based  
 on a specific persona and their job-to-be-done.
 
 ## Approach
@@ -15,13 +15,13 @@ This solution extracts and ranks the most relevant sections from PDF documents b
 The core of the solution is a lightweight pipeline that works as follows:
 
 1. **Input Processing**  
-   The script reads a single JSON input file that describes the target *persona* and *job to be done*, along with a list of PDF filenames to analyze. The PDFs are placed in an organized `input/PDFs` folder.  
+   The script reads a single JSON input file that describes the target *persona* and *job to be done*, along with a list of PDF filenames to analyze. The PDFs are placed in an organized `input/PDFs` folder.
 
 2. **Candidate Section Extraction**  
    For each PDF, the script uses `PyPDF2` to extract text page by page. From each page, the first few non-empty lines are treated as candidate section headings, under the assumption that headings or prominent content usually appear near the top of a page. This heuristic avoids complex layout parsing while reliably surfacing potential sections of interest.
 
 3. **Semantic Similarity Ranking**  
-   The solution uses a locally stored `SentenceTransformer` model (`all-mpnet-base-v2`) to compute embeddings for both the user query (persona + job to be done) and all candidate section titles.  
+   The solution uses a locally stored `SentenceTransformer` model (`all-MiniLM-L6-v2`) to compute embeddings for both the user query (persona + job to be done) and all candidate section titles.  
    It then computes pairwise cosine similarity scores between the query embedding and each candidate’s embedding. This semantic similarity step enables the system to connect the user’s intent with the content, even when relevant sections do not contain exact keyword matches.
 
 4. **Selecting the Best Sections**  
@@ -33,10 +33,16 @@ The core of the solution is a lightweight pipeline that works as follows:
    - The top-ranked section titles with page references and ranks
    - A refined text snippet for each, supporting downstream summarization or analysis
 
+## Note on Model Download
+
+We **do not** include a pre-downloaded model inside the git repository.  
+Instead, the `all-MiniLM-L6-v2` model is **downloaded and cached during the Docker build** stage, and saved inside the image itself.  
+This ensures the container is self-contained and can run without internet access at runtime.
+
 ## Libraries Used
 
-- **PyPDF2**: A robust PDF text extraction library.
-- **SentenceTransformers**: Provides the `all-mpnet-base-v2` model for efficient semantic similarity matching.
+- **PyPDF2**: For PDF text extraction.
+- **SentenceTransformers**: For semantic similarity matching with `all-MiniLM-L6-v2`.
 
 ## How to Build and Run
 
