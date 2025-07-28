@@ -4,6 +4,10 @@ from PyPDF2 import PdfReader
 from sentence_transformers import SentenceTransformer, util
 from datetime import datetime, timezone
 
+import warnings
+warnings.filterwarnings("ignore", category = FutureWarning)
+
+
 MODEL_PATH = './models/all-MiniLM-L6-v2'   
 INPUT_DIR = './input'            
 PDF_DIR = os.path.join(INPUT_DIR, 'PDFs')
